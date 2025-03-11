@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:quiz_app/data/questions.dart";
+import "package:quiz_app/questions_screen.dart";
 import "package:quiz_app/start_screen.dart";
 import "package:quiz_app/results_screen.dart";
 
@@ -57,9 +58,9 @@ class _QuizState extends State<Quiz> {
           ),
           child: (activeScreen == "start-screen")
               ? StartScreen(switchScreen)
-              : (activeScreen == "resutls-screen")
+              : (activeScreen == "results-screen")
                   ? ResultsScreen(selectedAnswers)
-                  : StartScreen(switchScreen),
+                  : QuestionsScreen(chooseAnswer),
         ),
       ),
     );
